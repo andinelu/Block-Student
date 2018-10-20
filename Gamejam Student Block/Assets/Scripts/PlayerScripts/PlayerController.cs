@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] private float maxHorizontalSpeed;
     [SerializeField] private float velocityIncrements;
     [SerializeField] private float m_JumpForce = 400f;
+    [SerializeField] private string[] playerControls;
 
     private bool hasJumped;
     private bool isRoofed;
@@ -42,6 +43,43 @@ public class PlayerController : MonoBehaviour {
     }
 
 
+    Vector2 CalculateHorizontalSpeed()
+    {
+        float horizontalAxis = Input.GetAxis (playerControls[0]);
+        Vector2 newVelocity = rb2d.velocity + (horizontalAxis * velocityIncrements * Vector2.right * Time.fixedDeltaTime);
+        if (horizontalAxis == 0)
+        {
+            newVelocity.x *= .90f * (1 - Time.fixedDeltaTime);
+        }
+
+        if (newVelocity.x < 0 && horizontalAxis > 0)
+        {
+            newVelocity.x *= .8f * (1 - Time.fixedDeltaTime);
+        }
+        if (newVelocity.x > 0 && horizontalAxis < 0)
+        {
+            newVelocity.x *= .8f * (1 - Time.fixedDeltaTime);
+        }
+        newVelocity.x = Mathf.Clamp (newVelocity.x, -maxHorizontalSpeed, maxHorizontalSpeed);
+
+        rb2d.velocity = newVelocity;
+        return newVelocity;
+    }
+
+    void CalculateVerticalSpeed (Vector2 newVelocity)
+    {
+        if (Input.GetAxis (this.playerControls[1]) != 0 && this.isGrounded && rb2d.velocity.y <= 0)
+        {
+            if(this.hasJumped == false)
+            {
+                newVelocity.y = 0;
+                rb2d.velocity = newVelocity;
+                rb2d.AddForce (Vector2.up * m_JumpForce, ForceMode2D.Impulse);
+                this.hasJumped = true;
+            }
+        }
+    }
+
     void Jump()
     {
         if(gameObject.GetComponentInChildren<FootSensorController> ().groundChecker () == true)
@@ -58,10 +96,18 @@ public class PlayerController : MonoBehaviour {
     private void FixedUpdate()
     {
         this.isGrounded = gameObject.GetComponentInChildren<FootSensorController> ().groundChecker ();
+        if (this.isGrounded)
+        {
+            this.hasJumped = false;
+        }
         this.isRoofed = gameObject.GetComponentInChildren<HeadSensorController> ().roofChecker ();
+        Vector2 newVelocity = CalculateHorizontalSpeed ();
+        CalculateVerticalSpeed (newVelocity);
+
         if(this.isRoofed && this.isGrounded)
         {
             this.Die ();
         }
+
     }
 }
