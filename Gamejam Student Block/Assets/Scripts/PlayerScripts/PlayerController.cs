@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] private float speed;
     [SerializeField] private float maxHorizontalSpeed;
     [SerializeField] private float velocityIncrements;
+    [SerializeField] private float m_JumpForce = 400f;
 
     private bool hasJumped;
     private bool isGrounded;
