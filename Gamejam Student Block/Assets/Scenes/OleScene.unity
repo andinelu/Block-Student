@@ -234,6 +234,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 817887286}
+  - component: {fileID: 817887287}
   m_Layer: 0
   m_Name: HeadSensor
   m_TagString: Untagged
@@ -254,6 +255,17 @@ Transform:
   m_Father: {fileID: 792726509}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &817887287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 817887285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b4adec7c1bb7b44ab975b7c4d875a4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &931678623
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,6 +351,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1678127277}
+  - component: {fileID: 1678127278}
   m_Layer: 0
   m_Name: FootSensor
   m_TagString: Untagged
@@ -359,6 +372,17 @@ Transform:
   m_Father: {fileID: 792726509}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1678127278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1678127276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed4d109605d2504448c6d296784dedfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1913070148
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,6 +391,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1913070149}
+  - component: {fileID: 1913070150}
   m_Layer: 0
   m_Name: LeftsideSensor
   m_TagString: Untagged
@@ -387,6 +412,17 @@ Transform:
   m_Father: {fileID: 792726509}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1913070150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1913070148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47646e8682d59e440af735fdb05db4a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2066353499
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,6 +431,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2066353500}
+  - component: {fileID: 2066353501}
   m_Layer: 0
   m_Name: RightsideSensor
   m_TagString: Untagged
@@ -415,3 +452,14 @@ Transform:
   m_Father: {fileID: 792726509}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2066353501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2066353499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0ba511b57a46fa4ca6db704f0ec6033, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
