@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] private float m_JumpForce = 400f;
 
     private bool hasJumped;
+    private bool isRoofed;
     private bool isGrounded;
 
     [SerializeField] public LayerMask groundMask;
@@ -56,8 +57,11 @@ public class PlayerController : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        this.isGrounded = false;
-        bool grounded = gameObject.GetComponentInChildren<FootSensorController> ().groundChecker();
-
+        this.isGrounded = gameObject.GetComponentInChildren<FootSensorController> ().groundChecker ();
+        this.isRoofed = gameObject.GetComponentInChildren<HeadSensorController> ().roofChecker ();
+        if(this.isRoofed && this.isGrounded)
+        {
+            this.Die ();
+        }
     }
 }
