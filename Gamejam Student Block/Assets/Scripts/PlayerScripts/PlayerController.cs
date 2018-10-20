@@ -13,18 +13,19 @@ public class PlayerController : MonoBehaviour {
     private bool hasJumped;
     private bool isGrounded;
 
-    [SerializeField] private LayerMask groundMask;
+    [SerializeField] public LayerMask groundMask;
 
 
     void Awake()
     {
-        this.rb2d = GetComponent<Rigidbody2D> ();
     }
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+        this.rb2d = GetComponent<Rigidbody2D> ();
+        this.isGrounded = true;
+        this.hasJumped = false;
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -36,7 +37,17 @@ public class PlayerController : MonoBehaviour {
         {
             GetComponent<SpriteRenderer> ().flipX = false;
         }
+
     }
+
+
+    void Jump()
+    {
+        if(gameObject.GetComponentInChildren<FootSensorController> ().groundChecker () == true)
+        {
+        }
+    }
+
 
     void Die()
     {
@@ -45,8 +56,8 @@ public class PlayerController : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        bool grounded = this.isGrounded;
         this.isGrounded = false;
+        bool grounded = gameObject.GetComponentInChildren<FootSensorController> ().groundChecker();
 
     }
 }
