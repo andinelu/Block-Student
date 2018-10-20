@@ -28,13 +28,25 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        if (rb2d.velocity.x < -0.01)
+        {
+            GetComponent<SpriteRenderer> ().flipX = true;
+        }
+        if (rb2d.velocity.x > 0.01)
+        {
+            GetComponent<SpriteRenderer> ().flipX = false;
+        }
+    }
 
+    void Die()
+    {
 
+    }
 
     private void FixedUpdate()
     {
-        
+        bool grounded = this.isGrounded;
+        this.isGrounded = false;
+
     }
 }
