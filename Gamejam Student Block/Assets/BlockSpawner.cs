@@ -13,7 +13,7 @@ public class BlockSpawner : MonoBehaviour {
 
         prefabs[0] = Resources.Load("Prefabs/Block") as GameObject;
         prefabs[1] = Resources.Load("Prefabs/I-block") as GameObject;
-        prefabs[2] = Resources.Load("Prefabs/L-block_v2") as GameObject;
+        prefabs[2] = Resources.Load("Prefabs/L-block") as GameObject;
         prefabs[3] = Resources.Load("Prefabs/O-block") as GameObject;
         // prefabs[3] = Resources.Load()
         Instantiate(prefabs[Random.Range(0, prefabs.Length)]);
