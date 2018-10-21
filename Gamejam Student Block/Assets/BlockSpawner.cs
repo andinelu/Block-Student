@@ -10,13 +10,13 @@ public class BlockSpawner : MonoBehaviour {
     void Start() {
         //int blockType = Random.Range(0, blockTypes.Length);
         //Instantiate(blockTypes[blockType], Vector3.one,Quaternion.identity);
-
         prefabs[0] = Resources.Load("Prefabs/Block") as GameObject;
         prefabs[1] = Resources.Load("Prefabs/I-block") as GameObject;
         prefabs[2] = Resources.Load("Prefabs/L-block") as GameObject;
         prefabs[3] = Resources.Load("Prefabs/O-block") as GameObject;
+        prefabs[4] = Resources.Load ("Prefabs/Curriculum_block") as GameObject;
+
         // prefabs[3] = Resources.Load()
-        Instantiate(prefabs[Random.Range(0, prefabs.Length)]);
 
     }
 	
@@ -25,7 +25,7 @@ public class BlockSpawner : MonoBehaviour {
 		if (time.hasEnded())
         {
             Instantiate(prefabs[Random.Range(0, prefabs.Length)],
-                new Vector3(Random.Range(-10,10), 3,0),Quaternion.identity);
+                new Vector3(Random.Range(-5,5), 10,0),Quaternion.identity,GameObject.Find("BlockContainer").transform);
             time.restart();
         }
 	}
