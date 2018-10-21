@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212698094878915142}
   - component: {fileID: 114859631897013558}
   - component: {fileID: 61835278325227142}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 212199754779918318}
   - component: {fileID: 114771471966427744}
   - component: {fileID: 61683670410308118}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,9 +57,9 @@ GameObject:
   - component: {fileID: 4316878787018392}
   - component: {fileID: 50198424965446078}
   - component: {fileID: 66115423861362676}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: O-block
-  m_TagString: Untagged
+  m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 212107616565774658}
   - component: {fileID: 114004731141689620}
   - component: {fileID: 61749893746224186}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 212187508374170258}
   - component: {fileID: 114214884855327544}
   - component: {fileID: 61082847130130738}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -187,7 +187,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!61 &61082847130130738
 BoxCollider2D:
@@ -302,7 +302,7 @@ CompositeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
+  m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:
