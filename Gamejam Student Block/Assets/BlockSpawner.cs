@@ -12,9 +12,8 @@ public class BlockSpawner : MonoBehaviour {
         //Instantiate(blockTypes[blockType], Vector3.one,Quaternion.identity);
         prefabs[0] = Resources.Load("Prefabs/Block") as GameObject;
         prefabs[1] = Resources.Load("Prefabs/I-block") as GameObject;
-        prefabs[2] = Resources.Load("Prefabs/L-block") as GameObject;
-        prefabs[3] = Resources.Load("Prefabs/O-block") as GameObject;
-        prefabs[4] = Resources.Load ("Prefabs/Curriculum_block") as GameObject;
+        prefabs[2] = Resources.Load("Prefabs/O-block") as GameObject;
+        //prefabs[3] = Resources.Load("Prefabs/L-block") as GameObject;
 
         // prefabs[3] = Resources.Load()
 

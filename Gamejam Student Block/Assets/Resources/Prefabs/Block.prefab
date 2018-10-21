@@ -20,9 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4515851705865956}
   - component: {fileID: 212294362412433228}
-  - component: {fileID: 114185624773856078}
-  - component: {fileID: 61271789499233442}
   - component: {fileID: 50899883278857108}
+  - component: {fileID: 61591154393903456}
   m_Layer: 11
   m_Name: Block
   m_TagString: Block
@@ -38,7 +37,7 @@ Transform:
   m_GameObject: {fileID: 1550930584963642}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.67, y: 4.97, z: -0.048388317}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -54,16 +53,16 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 1000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.07
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!61 &61271789499233442
+--- !u!61 &61591154393903456
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -74,8 +73,8 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 1
-  m_Offset: {x: 0.0008816719, y: -0.0002746582}
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -86,20 +85,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.63932276, y: 0.6426978}
+  m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
---- !u!114 &114185624773856078
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1550930584963642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9008e21bd8214f4478e370ba8f51147c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blockTypes: []
 --- !u!212 &212294362412433228
 SpriteRenderer:
   m_ObjectHideFlags: 1
