@@ -8,20 +8,26 @@ public class FootSensorController : MonoBehaviour {
 	void Start () {
 		
 	}
-	
 
-    public bool groundChecker ()
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        
+    }
+
+    public bool groundChecker(LayerMask ground)
     {
         Vector2 center = gameObject.transform.position;
         Vector2 size = gameObject.GetComponent<BoxCollider2D> ().size;
-        Collider2D firstOverlappingCollider = Physics2D.OverlapBox (center, size, 0f);
-        if (firstOverlappingCollider == null)
+        Collider2D groundoverlappingCollider = Physics2D.OverlapBox (center, size, 0f, ground);
+
+        if (groundoverlappingCollider == null){
             return false;
-        if (firstOverlappingCollider.tag == "Block")
+        }
+        else
         {
             return true;
         }
-        return true;
     }
 	// Update is called once per frame
 	void Update () {
