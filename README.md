@@ -1,2 +1,2 @@
 # Block-Student
-GameJame Idea Oktobober 2018 
+GameJame Idea October 2018 
